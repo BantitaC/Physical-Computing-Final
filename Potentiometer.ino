@@ -6,7 +6,7 @@ const int potPin = A0;
 
 // ข้อมูลการเชื่อมต่อ WiFi
 const char* ssid = "iqxemS <3";        // ใส่ชื่อ WiFi ของคุณ
-const char* password = "192329358"; // ใส่รหัสผ่าน WiFi ของคุณ
+const char* password = ""; // ใส่รหัสผ่าน WiFi ของคุณ
 
 // ข้อมูลการเชื่อมต่อ MQTT
 const char* mqttServer = "phycom.it.kmitl.ac.th";
