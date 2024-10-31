@@ -1,12 +1,18 @@
+//ตัวปรับค่าที่หมุน ๆ ได้
+// วิธีต่อ (หันด้านเรียบๆที่ไม่ได้เอาไว้หมุนเข้าหาตัว)
+// 1. ขาซ้าย ต่อ 5v
+// 2. ขากลาง ต่อ A0
+// 3. ขาขวา ต่อ GND
+
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-// ขาอนาล็อกที่เชื่อมต่อกับตัวต้านทานปรับค่า
+// ขากลาง
 const int potPin = A0;
 
 // ข้อมูลการเชื่อมต่อ WiFi
-const char* ssid = "iqxemS <3";        // ใส่ชื่อ WiFi ของคุณ
-const char* password = ""; // ใส่รหัสผ่าน WiFi ของคุณ
+const char* ssid = "namewifi";        // ใส่ชื่อ WiFi มือถือ
+const char* password = "password"; // ใส่รหัสผ่าน WiFi
 
 // ข้อมูลการเชื่อมต่อ MQTT
 const char* mqttServer = "phycom.it.kmitl.ac.th";
