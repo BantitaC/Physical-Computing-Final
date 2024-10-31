@@ -6,14 +6,14 @@ const int trigPin = 9;  // ขาที่เชื่อมต่อกับ T
 const int echoPin = 10; // ขาที่เชื่อมต่อกับ Echo pin
 
 // ข้อมูลการเชื่อมต่อ WiFi
-const char* ssid = "iqxemS <3";        // ใส่ชื่อ WiFi ของคุณ
-const char* password = ""; // ใส่รหัสผ่าน WiFi ของคุณ
+const char* ssid = "namewifi";       // ใส่ชื่อ WiFi Hotspot โทรศัพท์ ***
+const char* password = "passwordwifi";  // ใส่รหัสผ่าน WiFi *** 
 
 // ข้อมูลการเชื่อมต่อ MQTT
-const char* mqttServer = "phycom.it.kmitl.ac.th";
+const char* mqttServer = "phycom.it.kmitl.ac.th"; //ดู host จากหน้าเว็บช่องซ้ายสุด อาจจะ https://phycom.it.kmitl.ac.th/exam67
 const int mqttPort = 1883;
-const char* mqttClientID = "client_3d592a95";
-const char* topic = "66070109/food";
+const char* mqttClientID = "client_xxxxxxx"; //ใส่ client id อยู่ช่องขวาสุดในหน้าเว็บ ***
+const char* topic = "studentid/topicname"; //ใส่ชื่อ Topic ตามที่เขาให้มา Ex. 66070xxx/light ***
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
