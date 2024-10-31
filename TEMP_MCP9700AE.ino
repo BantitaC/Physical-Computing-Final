@@ -1,19 +1,26 @@
+// วิธีต่อบอร์ด (ใช้ตัววัดอุณหภูมิสีดำสามขา หันด้านแบนเข้าหาตัว)
+// 1. ขาซ้าย ต่อ 5V
+// 2. ขากลาง ต่อ A0
+// 3. ขาซ้าย ต่อ GND
+
+//แก้ตรงที่มี *** นอกนั้นไม่ต้องแก้
+
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const int tempPin = A0;  // ขาอนาล็อกที่เชื่อมต่อกับ MCP9700AE
+const int tempPin = A0;  // ขากลาง
 
 // ข้อมูลการเชื่อมต่อ WiFi
-const char* ssid = "iqxemS <3";       // ใส่ชื่อ WiFi ของคุณ
-const char* password = "";  // ใส่รหัสผ่าน WiFi ของคุณ
+const char* ssid = "namewifi";       // ใส่ชื่อ WiFi Hotspot โทรศัพท์ ***
+const char* password = "passwordwifi";  // ใส่รหัสผ่าน WiFi *** 
 
 // ข้อมูลการเชื่อมต่อ MQTT
-const char* mqttServer = "phycom.it.kmitl.ac.th";
-const int mqttPort = 1883; // ใช้พอร์ต 1883 ถ้าไม่ใช้ SSL/TLS
-const char* mqttClientID = "client_6959fa78";
-const char* topic = "testtopic/109";
+const char* mqttServer = "phycom.it.kmitl.ac.th"; //ดู host จากหน้าเว็บช่องซ้ายสุด อาจจะ https://phycom.it.kmitl.ac.th/exam67
+const int mqttPort = 1883;
+const char* mqttClientID = "client_xxxxxxx"; //ใส่ client id อยู่ช่องขวาสุดในหน้าเว็บ ***
+const char* topic = "studentid/topicname"; //ใส่ชื่อ Topic ตามที่เขาให้มา Ex. 66070xxx/light ***
 
-WiFiClient wifiClient; // ใช้ WiFiClient
+WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
 void setup() {
